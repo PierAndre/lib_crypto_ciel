@@ -9,7 +9,7 @@
 int main()
 {
 	HashGestion LM;
-	std::string monMessageHash = ("C:\Users\CIEL23_admin\Documents\seq01_compil_cpp\act05-chiffrementCpp\attendu_chiffrement\lib_crypto_ciel\superMessage.txt");
+	std::string monMessageHash = ("C:\Users\CIEL23_admin\Documents\seq01_compil_cpp\act05-chiffrementCpp\attendu_chiffrement\lib_crypto_ciel\superMessage.bin");
 	std::cout << LM.CalculateSHA256(monMessageHash) << std::endl;
 
 }
