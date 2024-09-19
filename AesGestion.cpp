@@ -16,6 +16,10 @@ AesGestion::AesGestion()
 	
 }
 
+AesGestion::~AesGestion()
+{
+}
+
 
 /**
  * \brief generation d'une clef AES 
@@ -26,7 +30,7 @@ void AesGestion::GenerateAESKey()
 {
     CryptoPP::AutoSeededRandomPool rng;
     rng.GenerateBlock(this->aesKey, sizeof(this->aesKey));
-    //std::cout << "Generation de clef OK" << std::endl;
+    std::cout << "Generation de clef OK" << std::endl;
 }
 
 
@@ -48,7 +52,7 @@ void AesGestion::SaveAESKeyToFile(const std::string& filename)
 
     ofs.close();
 
-    //std::cout << "Sauvegarde clef AES dans : " << filename << std::endl;
+    std::cout << "Sauvegarde clef AES dans : " << filename << std::endl;
 }
 
 /**
@@ -69,7 +73,7 @@ void AesGestion::LoadAESKeyFromFile(const std::string& filename)
 
     ifs.close();
 
-    //std::cout << "Chargement clef AES depuis " << filename << std::endl;
+    std::cout << "Chargement clef AES depuis " << filename << std::endl;
 }
 
 
