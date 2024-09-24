@@ -14,12 +14,21 @@ int main()
 	std::cout << LM.CalculateSHA256(monMessageHash) << std::endl;
 	*/
 
+	
 	AesGestion cryptAES;
 	cryptAES.GenerateAESKey();
-	std::string filename = "maCle.bin";
-	cryptAES.SaveAESKeyToFile(filename);
-	cryptAES.LoadAESKeyFromFile(filename);
-	//std::string monMesssageAes = "Super message superchouette";
+	std::string monFichierCle = "maCleSecrete.bin";
+	std::string clairMessage = "message_secret.txt";
+	std::string chiffreMessage = "message_chiffre.txt";
+	cryptAES.SaveAESKeyToFile(monFichierCle);
+	cryptAES.LoadAESKeyFromFile(monFichierCle);
+	cryptAES.EncryptFileAES256(clairMessage, chiffreMessage);
+	
+
+
+	//RsaGestion cryptRSA;
+	//cryptRSA.generationClef(PApublic,PAprivée);
+
 }
 
 
