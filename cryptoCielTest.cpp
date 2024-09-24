@@ -20,9 +20,11 @@ int main()
 	std::string monFichierCle = "maCleSecrete.bin";
 	std::string clairMessage = "message_secret.txt";
 	std::string chiffreMessage = "message_chiffre.txt";
-	cryptAES.SaveAESKeyToFile(monFichierCle);
+	std::string dechiffreMessage = "message_dechiffre.txt";
+	//cryptAES.SaveAESKeyToFile(monFichierCle);
 	cryptAES.LoadAESKeyFromFile(monFichierCle);
 	cryptAES.EncryptFileAES256(clairMessage, chiffreMessage);
+	cryptAES.DecryptFileAES256(chiffreMessage, dechiffreMessage);
 	
 
 
